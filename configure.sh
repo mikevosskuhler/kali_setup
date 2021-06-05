@@ -24,12 +24,22 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 curl https://pyenv.run | bash
 echo '# pyenv config' >> ~/.zshrc
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
-exec $SHELL
 # change default shell
 # run these commands manually
 # chsh -s $(which $SHELL)
 # logout and in
 # open code: `code`
 # open obsidian: `obsidian`
-# open pyenv: `pyenv`
+# test pyenv: `pyenv`
+# install bpython for interactive development
+pyenv install 3.9.5
+pyenv virtualenv 3.9.5 interactive
+pyenv activate interactive
+pip install bpython
+
+# activate night light for the GNOME GUI
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+# create ssh key
+ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y 2>&1 >/dev/null
