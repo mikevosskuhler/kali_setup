@@ -43,3 +43,13 @@ pip install bpython
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 # create ssh key
 ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y 2>&1 >/dev/null
+# Add firefox addons
+# Foxyproxy
+# https://add0n.com/javascript-toggler.html
+
+# unzip rockyou.txt
+echo $sudoPW | sudo -S gunzip -c /usr/share/wordlists/rockyou.txt.gz > /usr/share/worldlists/rockyou.txt
+
+# install OWASP fuzzdb add on
+
+
