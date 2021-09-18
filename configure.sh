@@ -51,5 +51,7 @@ ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y 2>&1 >/dev/null
 echo $sudoPW | sudo -S gunzip -c /usr/share/wordlists/rockyou.txt.gz > /usr/share/worldlists/rockyou.txt
 
 # install OWASP fuzzdb add on
-
-
+### TODO:
+# install nvim
+# clone nvim configs
+# install tmux
